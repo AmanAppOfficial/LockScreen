@@ -1,0 +1,129 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="e.aman.lockdemo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.REORDER_TASKS" />
+11-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:6:5-72
+11-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:6:22-69
+12    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+12-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:7:5-78
+12-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:7:22-75
+13    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+13-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:8:5-75
+13-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:8:22-72
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:9:5-68
+14-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:9:22-65
+15    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+15-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:10:5-81
+15-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:10:22-78
+16    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+16-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:11:5-75
+16-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:11:22-72
+17    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+17-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:12:5-77
+17-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:12:22-74
+18    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+18-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:13:5-15:47
+18-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:14:9-65
+19
+20    <application
+20-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:17:5-59:19
+21        android:allowBackup="true"
+21-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:18:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] /home/aman/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:19:9-43
+25        android:label="@string/app_name"
+25-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:20:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:21:9-54
+27        android:supportsRtl="true"
+27-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:22:9-35
+28        android:testOnly="true"
+29        android:theme="@style/FullScreen" >
+29-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:23:9-42
+30        <activity android:name="e.aman.lockdemo.Views.MainActivity" >
+30-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:24:9-31:20
+30-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:24:19-53
+31            <intent-filter>
+31-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:25:13-30:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:26:17-69
+32-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:26:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:28:17-77
+34-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:28:27-74
+35                <category android:name="android.intent.category.DEFAULT" />
+35-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:29:17-76
+35-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:29:27-73
+36            </intent-filter>
+37        </activity>
+38        <activity android:name="e.aman.lockdemo.Views.ResetPatternActivity" />
+38-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:32:9-64
+38-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:32:19-61
+39        <activity android:name="e.aman.lockdemo.Views.PatternLockScreenActivity" >
+39-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:33:9-34:20
+39-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:33:19-66
+40        </activity>
+41
+42        <service android:name="e.aman.lockdemo.Services.LockScreenService" />
+42-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:36:9-63
+42-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:36:18-60
+43        <service android:name="e.aman.lockdemo.Services.FloatingWidgetService" />
+43-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:37:9-67
+43-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:37:18-64
+44
+45        <receiver
+45-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:39:9-45:20
+46            android:name="e.aman.lockdemo.Receivers.LockScreenReceiver"
+46-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:40:13-57
+47            android:enabled="true" >
+47-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:41:13-35
+48            <intent-filter android:priority="1000" >
+48-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:42:13-44:29
+48-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:42:28-51
+49                <action android:name="android.intent.action.BOOT_COMPLETED" />
+49-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:43:17-79
+49-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:43:25-76
+50            </intent-filter>
+51        </receiver>
+52        <receiver android:name="e.aman.lockdemo.Receivers.RestartWhenBootCompleteReceiver" >
+52-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:46:9-52:20
+52-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:46:19-76
+53            <intent-filter android:priority="1000" >
+53-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:47:13-51:29
+53-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:47:28-51
+54                <action android:name="android.intent.action.BOOT_COMPLETED" />
+54-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:43:17-79
+54-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:43:25-76
+55
+56                <category android:name="android.intent.category.DEFAULT" />
+56-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:29:17-76
+56-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:29:27-73
+57            </intent-filter>
+58        </receiver>
+59        <receiver
+59-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:53:9-58:15
+60            android:name="e.aman.lockdemo.Receivers.RestartWhenAppDiesReceiver"
+60-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:54:13-65
+61            android:enabled="true"
+61-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:55:13-35
+62            android:exported="true"
+62-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:56:13-36
+63            android:label="RestartServiceWhenStopped" />
+63-->/home/aman/LockDemo/app/src/main/AndroidManifest.xml:57:13-54
+64    </application>
+65
+66</manifest>
