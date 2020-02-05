@@ -13,6 +13,7 @@
     <uses-permission
         android:name="android.permission.INTERNAL_SYSTEM_WINDOW"
         tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +22,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
-        <activity android:name=".Views.MainActivity">
+        <activity android:name=".Views.PinLock.PinIntermediateActivity"></activity>
+        <activity android:name=".Views.PatternLock.PatternIntermediateActivity" />
+        <activity android:name=".Views.PinLock.PinConfirmActivity" />
+        <activity android:name=".Views.PatternLock.PatternConfirmActivity" />
+        <activity android:name=".Views.Wallpaper.ChangeBackgroundActivity" />
+        <activity android:name=".Views.PinLock.ResetPinActivity" />
+        <activity android:name=".Views.PinLock.PinLockScreenActivity" />
+        <activity android:name=".Views.PinLock.MainActivityPin" />
+        <activity android:name=".Views.PatternLock.MainActivityPattern">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,12 +38,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Views.ResetPatternActivity" />
-        <activity android:name=".Views.PatternLockScreenActivity">
-        </activity>
+        <activity android:name=".Views.PatternLock.ResetPatternActivity" />
+        <activity android:name=".Views.PatternLock.PatternLockScreenActivity" />
 
         <service android:name=".Services.LockScreenService" />
-        <service android:name=".Services.FloatingWidgetService" />
+        <service android:name=".Services.WidgetService" />
 
         <receiver
             android:name=".Receivers.LockScreenReceiver"
@@ -54,8 +62,7 @@
             android:name=".Receivers.RestartWhenAppDiesReceiver"
             android:enabled="true"
             android:exported="true"
-            android:label="RestartServiceWhenStopped"
-            />
+            android:label="RestartServiceWhenStopped" />
     </application>
 
 </manifest>

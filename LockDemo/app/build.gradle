@@ -36,4 +36,8 @@ dependencies {
 
     implementation 'io.paperdb:paperdb:2.0'
     implementation 'com.andrognito.patternlockview:patternlockview:1.0.0'
+    implementation 'com.github.GoodieBag:Pinview:v1.3'
+    implementation 'com.google.android.material:material:1.0.0-rc01'
+    implementation 'com.karumi:dexter:6.0.1'
+
 }

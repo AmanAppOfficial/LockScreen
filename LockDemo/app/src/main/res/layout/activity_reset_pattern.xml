@@ -3,27 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Views.ResetPatternActivity">
+    tools:context=".Views.PatternLock.ResetPatternActivity">
 
 
     <TextView
+        android:id="@+id/register_pattern_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Set Password"
+        android:text="Set Pattern"
+        android:layout_marginTop="40dp"
+        android:textColor="#24F115"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textStyle="italic"
+        android:textSize="50sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#333639"
+        android:layout_marginTop="100dp"
         android:orientation="vertical"
         >
 
         <com.andrognito.patternlockview.PatternLockView
             android:id="@+id/reset_pattern_view"
+            android:background="@drawable/background"
             android:layout_width="match_parent"
             android:layout_height="300dp"/>
 
@@ -34,7 +41,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SET PATTERN"
+        android:layout_margin="30dp"
         android:textStyle="bold"
+        android:background="@drawable/button_background"
         android:textSize="20sp"
         />
 

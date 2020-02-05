@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context=".Views.PinLock.PinConfirmActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Pin"
+        android:layout_marginTop="40dp"
+        android:textColor="#24F115"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:textSize="50sp"/>
+
+
+    <com.goodiebag.pinview.Pinview
+        android:id="@+id/confirm_pin_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:pinWidth="40dp"
+        app:pinHeight="40dp"
+        android:layout_marginTop="40dp"
+        app:pinLength="4"
+        app:cursorVisible="true"
+        app:forceKeyboard="true"
+        app:inputType="number"
+        app:password="false"
+        />
+
+    <Button
+        android:id="@+id/confirm_pin_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONFIRM PIN"
+        android:layout_margin="30dp"
+        android:textStyle="bold"
+        android:background="@drawable/button_background"
+        android:textSize="20sp"
+        />
+
+
+
+</LinearLayout>

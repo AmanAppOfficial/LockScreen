@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    android:id="@+id/root_container_pin"
+    tools:context=".Views.PinLock.PinLockScreenActivity">
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/close_floating_view"
+        android:id="@+id/pin_lock"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/e1"
+            android:layout_width="40dp"
+            android:textAlignment="center"
+            android:background="@android:color/white"
+            android:layout_height="40dp"/>
+        <EditText
+            android:id="@+id/e2"
+            android:layout_width="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:background="@android:color/white"
+            />
+        <EditText
+            android:id="@+id/e3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:textAlignment="center"
+            android:background="@android:color/white"
+            />
+        <EditText
+            android:id="@+id/e4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:layout_marginLeft="30dp"
+            android:background="@android:color/white"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/pin_lock"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/keyboard"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

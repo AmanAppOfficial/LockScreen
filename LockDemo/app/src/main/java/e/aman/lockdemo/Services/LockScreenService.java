@@ -11,7 +11,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Build;
 import android.os.IBinder;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
@@ -41,11 +40,7 @@ public class LockScreenService extends Service
     @SuppressWarnings("deprecation")
     public void onCreate() {
 
-
-
-
-
-        KeyguardManager.KeyguardLock key;
+      KeyguardManager.KeyguardLock key;
         KeyguardManager km = (KeyguardManager)getSystemService(KEYGUARD_SERVICE);
 
         //This is deprecated, but it is a simple way to disable the lockscreen in code

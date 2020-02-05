@@ -4,29 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_centerHorizontal="true"
-    android:background="@drawable/download"
-    android:id="@+id/root_container"
+    android:background="@drawable/background"
+    android:id="@+id/root_container_pattern"
     android:layout_height="match_parent">
 
 
    <com.andrognito.patternlockview.PatternLockView
        android:layout_centerHorizontal="true"
-       android:id="@+id/app_logo"
+       android:id="@+id/pattern_lock"
+       android:layout_below="@+id/close_floating_view"
        android:layout_centerInParent="true"
        android:layout_width="match_parent"
+       android:layout_marginTop="200dp"
        android:layout_height="match_parent"
         />
-
-   <ImageView
-       android:id="@+id/close_floating_view"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginStart="72dp"
-       android:layout_marginTop="44dp"
-       android:background="@drawable/circle_shape"
-       android:src="@drawable/ic_close_white_24dp"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent"
-       tools:ignore="ContentDescription" />
 
 </RelativeLayout>

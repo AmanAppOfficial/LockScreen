@@ -1,47 +1,47 @@
-package e.aman.lockdemo.Views;
+package e.aman.lockdemo.Views.PatternLock;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
-
-import com.andrognito.patternlockview.PatternLockView;
-import com.andrognito.patternlockview.listener.PatternLockViewListener;
-import com.andrognito.patternlockview.utils.PatternLockUtils;
-
-import java.util.List;
 
 import e.aman.lockdemo.R;
-import e.aman.lockdemo.Services.FloatingWidgetService;
+import e.aman.lockdemo.Services.WidgetService;
 import e.aman.lockdemo.Services.LockScreenService;
-import io.paperdb.Paper;
+
 
 public class PatternLockScreenActivity extends AppCompatActivity {
 
     Intent mServiceIntent;
     private LockScreenService mSensorService;
     Context ctx ;
-
-
+    String status ="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         makeFullScreen();
-        startService(new Intent(this, FloatingWidgetService.class));
-        ctx = this ;
-        mSensorService = new LockScreenService(ctx);
-        mServiceIntent = new Intent(ctx, mSensorService.getClass());
-        startService(mServiceIntent);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        status = preferences.getString("status", null);
+        if(status.equals("lock_pattern"))
+        {
+            ctx = this ;
+            startService(new Intent(this, WidgetService.class));
+            mSensorService = new LockScreenService(ctx);
+            mServiceIntent = new Intent(ctx, mSensorService.getClass());
+            startService(mServiceIntent);
+
+
+        }
         setContentView(R.layout.activity_pattern_lockscreen);
-
-        finish();
-
+              finish();
 
     }
 
@@ -65,9 +65,16 @@ public class PatternLockScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-
-        stopService(mServiceIntent);
+           if(status.equals("lock_pattern"))
+            stopService(mServiceIntent);
         super.onDestroy();
     }
-
+//
+//    @Override
+//    protected void onStart() {
+//        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("my_background", Context.MODE_PRIVATE);
+//        int bg = sharedPref.getInt("background_resource", android.R.color.white); // the second parameter will be fallback if the preference is not found
+//        getWindow().setBackgroundDrawableResource(bg);
+//        super.onStart();
+//    }
 }
