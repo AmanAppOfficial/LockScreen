@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.PatternLock.MainActivityPattern">
+
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/lock_icon_main"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_background"
+        android:orientation="horizontal"
+        >
+
+
+        <TextView
+            android:id="@+id/enable_lock_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="20sp"
+            android:text="Enable lock"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+
+        <Switch
+            android:id="@+id/enable_lock_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="#24F115"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_background"
+        android:orientation="horizontal"
+        >
+
+
+        <TextView
+            android:id="@+id/switch_to_pin_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="20sp"
+            android:text="Switch to pin lock"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+             />
+
+        <Switch
+            android:id="@+id/switch_to_pin_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="#24F115"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/redirect_reset_pattern_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:textSize="15sp"
+        android:text="Reset Pattern"
+        />
+
+    <Button
+        android:id="@+id/change_background_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:textSize="15sp"
+        android:text="Change Background"
+        />
+
+
+
+
+</LinearLayout>
