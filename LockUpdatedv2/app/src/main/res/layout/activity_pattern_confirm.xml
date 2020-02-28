@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/sample_5"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/confirm_pattern_layout"
+    android:layout_height="match_parent"
+    tools:context=".Views.PatternLock.PatternConfirmActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Re-enter New Pattern"
+        android:layout_marginTop="70dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="25sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        >
+
+        <com.andrognito.patternlockview.PatternLockView
+            android:id="@+id/confirm_pattern_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
